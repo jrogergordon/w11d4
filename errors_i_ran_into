@@ -1,0 +1,31 @@
+# bundle exec rails db:create
+# generates an error relating to my local host
+# "connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+#         Is the server running on that host and accepting TCP/IP connections?"
+# stackoverflow links I tried using to deal with this error:
+# https://stackoverflow.com/questions/40532399/unable-to-connect-to-server-for-postgres
+
+# https://postgrespro.com/list/thread-id/2444289
+
+# bundle exec rails db create
+#generates an error relating to TZ info despite having that gem installed
+# TZInfo::DataSourceNotFound: tzinfo-data is not present. Please add gem 'tzinfo-data' to your Gemfile and run bundle install
+# stackoverflow links I tried using to deal with this error:
+#  https://stackoverflow.com/questions/23022258/tzinfodatasourcenotfound-error-starting-rails-v4-1-0-server-on-windows
+# I had "gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]" I tried moving it around and
+# it ended up working without the platforms array. 
+
+# can't start postgres
+# sudo service postgresql start
+# usually I run the above line to start postgres for rails projects and it runs without issue.
+# I'm not sure what I did but I changed something on my laptop since rails because now my console
+# won't accept this command
+# running with sudo returns
+# The term 'sudo' is not recognized as the name of a cmdlet, function, script file, or operable 
+# program. Check the spelling of the name, or if a path was included, verify that the path is correct and 
+# try again.
+# without sudo
+# Get-Service : A positional parameter cannot be found that accepts argument 'start'.
+# help links
+# https://docs.microsoft.com/en-us/answers/questions/266303/powershell-error-positional-parameter-cannot-be-fo.html
+# 
